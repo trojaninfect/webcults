@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>Media — Webcults HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">WEBCULTS HQ</a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="roster.html">ROSTER</a></li>
+      <li><a href="mediaplayer.html" class="active">MEDIA</a></li>
+      <li><a href="merch.html">MERCH</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">MENU</button>
+  </nav>
+</header>
+
+<main>
+  <div class="page-head">
+    <h1 class="page-title">MEDIA</h1>
+    <p class="page-sub">SOUNDS FROM THE COLLECTIVE</p>
+  </div>
+  <section class="section">
+    <div class="player" id="player">
+      <div class="player-now">
+        <div class="player-track" id="p-track">—</div>
+        <div class="player-artist" id="p-artist">—</div>
+      </div>
+      <div class="player-controls">
+        <button class="pbtn" id="p-prev" aria-label="Previous track">|◄</button>
+        <button class="pbtn" id="p-play" aria-label="Play or pause">►</button>
+        <button class="pbtn" id="p-next" aria-label="Next track">►|</button>
+        <input type="range" class="seek" id="p-seek" min="0" max="100" value="0" aria-label="Seek">
+        <span class="ptime" id="p-time">0:00 / 0:00</span>
+      </div>
+      <ul class="playlist" id="playlist"></ul>
+      <div class="player-note">▸ to add tracks: drop mp3 files in an /audio folder and set their paths in the PLAYLIST list at the top of site.js</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="#">SPOTIFY</a><a href="#">SOUNDCLOUD</a><a href="#">YOUTUBE</a>
+    <a href="#">INSTAGRAM</a><a href="#">DISCORD</a>
+  </div>
+  <p>© 2026 WEBCULTS HQ</p>
+  <p class="tagline">MUSIC COLLECTIVE.</p>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
